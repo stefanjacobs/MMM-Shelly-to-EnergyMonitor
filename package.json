@@ -1,0 +1,23 @@
+{
+	"name": "mmm-shelly-pm1plus-to-energymonitor",
+	"version": "1.0.0",
+	"description": "bla",
+	"main": "MMM-Shelly-PM1Plus-to-EnergyMonitor.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/stefanjacobs/MMM-Shelly-PM1Plus-to-EnergyMonitor"
+	},
+	"author": "",
+	"license": "UNLICENSE",
+	"bugs": {
+		"url": "https://github.com/stefanjacobs/MMM-Shelly-PM1Plus-to-EnergyMonitor/issues"
+	},
+	"homepage": "https://github.com/stefanjacobs/MMM-Shelly-PM1Plus-to-EnergyMonitor#readme",
+	"dependencies": {
+		"request": "^2.78.0"
+	},
+	"devDependencies": {}
+}
