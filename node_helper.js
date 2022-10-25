@@ -59,7 +59,7 @@ module.exports = NodeHelper.create({
 				if (result.power <= payload.solar_pm_min_watts) {
 					result.power = 0.0
 				}
-				console.log(result);
+				console.log("Solar: ", result);
 				self.sendSocketNotification('ShellySolarToEnergyMonitor', result);
 			})
 			.catch(error => {
@@ -73,7 +73,7 @@ module.exports = NodeHelper.create({
 				var result = {
 					power: response.data.total_power
 				}
-				console.log(result);
+				console.log("Grid: ", result);
 				self.sendSocketNotification('ShellyGridToEnergyMonitor', result);
 			})
 			.catch(error => {
@@ -99,7 +99,7 @@ module.exports = NodeHelper.create({
 					power: data.total,
 					power_unit: data.units.consumption
 				}
-				console.log(result);
+				console.log("Solar Cloud: ", result);
 				self.sendSocketNotification("ShellySolarCloud", result);
 			})
 			.catch(error => {
@@ -126,7 +126,7 @@ module.exports = NodeHelper.create({
 					returned: data.total_r3,
 					returned_unit: data.units.reversed
 				}
-				console.log(result);
+				console.log("Grid Cloud: ", result);
 				self.sendSocketNotification("ShellyGridCloud", result);
 			})
 			.catch(error => {
