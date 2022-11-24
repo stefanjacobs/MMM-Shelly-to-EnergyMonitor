@@ -9,10 +9,10 @@ module.exports = NodeHelper.create({
 
     start: function() {
 		var self = this;
-		self.solarLanHttpAgent = new agent({ maxSockets: 20, maxFreeSockets: 10, timeout: 60000, freeSocketTimeout: 30000 });
-		self.gridLanHttpAgent = new agent({ maxSockets: 20, maxFreeSockets: 10, timeout: 60000, freeSocketTimeout: 30000 });
-		self.solarCloudHttpAgent = new agent({ maxSockets: 20, maxFreeSockets: 10, timeout: 120000, freeSocketTimeout: 30000 });
-		self.gridCloudHttpAgent = new agent({ maxSockets: 20, maxFreeSockets: 10, timeout: 120000, freeSocketTimeout: 30000 });
+		self.solarLanHttpAgent = new agent({ maxSockets: 20, maxFreeSockets: 10, keepAliveMsecs: 120000, timeout: 60000, freeSocketTimeout: 30000 });
+		self.gridLanHttpAgent = new agent({ maxSockets: 20, maxFreeSockets: 10, keepAliveMsecs: 120000, timeout: 60000, freeSocketTimeout: 30000 });
+		self.solarCloudHttpAgent = new agent({ maxSockets: 20, maxFreeSockets: 10, keepAliveMsecs: 120000, timeout: 120000, freeSocketTimeout: 30000 });
+		self.gridCloudHttpAgent = new agent({ maxSockets: 20, maxFreeSockets: 10, keepAliveMsecs: 120000, timeout: 120000, freeSocketTimeout: 30000 });
 	},
 
 	getPrintDate: function() {
